@@ -14,7 +14,9 @@ class CustomOutlinedButton extends StatelessWidget {
       style: ButtonStyle(
         shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))),
         side: WidgetStateProperty.all(BorderSide(color: color)),
+        backgroundColor: WidgetStateProperty.all(isFilled ? color.withOpacity(0.3) : Colors.transparent)
       ),
+      
       
       onPressed: ()=> onPressed(),
       child: Padding(
@@ -23,8 +25,7 @@ class CustomOutlinedButton extends StatelessWidget {
           text,
           style: TextStyle( fontSize: 16),
         ),
-        
-        ),
+      ),
     );
   }
 }

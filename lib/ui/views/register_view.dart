@@ -4,8 +4,8 @@ import 'package:admin_dashboard/ui/buttons/link_text.dart';
 import 'package:admin_dashboard/ui/inputs/custom_inputs.dart';
 import 'package:flutter/material.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +24,21 @@ class LoginView extends StatelessWidget {
                 //validator: ,
                 style: TextStyle(color: Colors.white),
                 decoration: CustomInputs.loginInputDecoration(
-                  hint: 'Ingrese su email',
-                  label: 'Email',
-                  icon: Icons.email_outlined,
+                  hint: 'Ingrese su nombre',
+                  label: 'Nombre',
+                  icon: Icons.supervised_user_circle_outlined,
+                 ),
+                ),
+
+                SizedBox(height: 20,),
+
+                TextFormField(
+                //validator: ,
+                style: TextStyle(color: Colors.white),
+                decoration: CustomInputs.loginInputDecoration(
+                  hint: 'Ingrese su correo',
+                  label: 'Correo',
+                  icon: Icons.mail,
                  ),
                 ),
                 
@@ -46,21 +58,17 @@ class LoginView extends StatelessWidget {
                 
                 SizedBox(height: 20,),
                 CustomOutlinedButton(
-                  onPressed: (){
-                    print('hoal');
-                  }, 
-                  text: 'Ingresar',
+                  onPressed: (){}, 
+                  text: 'Crear cuenta',
                 
                 ),
 
 
                 SizedBox(height: 20,),
                 LinkText(
-                  text: 'Nueva cuenta',
+                  text: 'Ir al login',
                   onPressed: (){
-
-                    
-                    Navigator.pushNamed(context, Flurorouter.registerRoute);
+                    Navigator.pushNamed(context, Flurorouter.loginRoute);
                   },
                 )
 

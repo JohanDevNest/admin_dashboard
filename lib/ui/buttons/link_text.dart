@@ -13,12 +13,15 @@ class LinkText extends StatefulWidget {
 class _LinkTextState extends State<LinkText> {
 
   bool isHover = false;
+  
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if(widget.onPressed != null) widget.onPressed!;
+          if (widget.onPressed != null) {
+          widget.onPressed!();
+        }
       },
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
